@@ -16,7 +16,4 @@ jobs:
         key: ${{ secrets.KEY }}
         port: 22
         script: |
-          cd Github_Actions
-          git pull origin master
-          sudo cp index.html /var/www/html/index.nginx-debian.html
-          sudo systemctl restart nginx
+          pwd
