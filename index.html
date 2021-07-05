@@ -161,10 +161,10 @@
 
                 copiarResultados() {
                     /* Get the text field */
-                    var copyText = <div><table><tr><td>+this.tempoTotal+</td><td>+
-                        this.distanciaTotal+</td><td>+
-                        this.custoGasolina+</td><td>+
-                        this.custoPorQuilo+</td></tr></table></div>
+                    var copyText = '<div><table><tr><td>'+this.tempoTotal+'</td><td>'+
+                        this.distanciaTotal+'</td><td>'+
+                        this.custoGasolina+'</td><td>'+
+                        this.custoPorQuilo+'</td></tr></table></div>'
                     copyText = copyText.replaceAll('.', ',')
                     var dummy = document.createElement("textarea");
                     document.body.appendChild(dummy);
