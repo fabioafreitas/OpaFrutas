@@ -16,5 +16,6 @@ jobs:
         key: ${{ secrets.KEY }}
         port: 22
         script: |
-          pwd
-          touch teste.txt
+          cd OpaFrutas
+          sudo cat ./index.html /var/www/html/index.nginx-debian.html
+          sudo systemctl restart nginx
