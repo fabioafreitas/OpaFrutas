@@ -17,3 +17,4 @@ jobs:
         port: 22
         script: |
           pwd
+          touch teste.txt
