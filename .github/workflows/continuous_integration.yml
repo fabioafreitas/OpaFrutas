@@ -1,0 +1,22 @@
+name: remote ssh command
+on: 
+  push:
+    branches: [ master ]
+
+jobs:
+  job_one:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using key
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USER }}
+        key: ${{ secrets.KEY }}
+        port: 22
+        script: |
+          cd Github_Actions
+          git pull origin master
+          sudo cp index.html /var/www/html/index.nginx-debian.html
+          sudo systemctl restart nginx
