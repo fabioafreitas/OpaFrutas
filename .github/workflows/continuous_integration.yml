@@ -17,5 +17,6 @@ jobs:
         port: 22
         script: |
           cd OpaFrutas
+          git pull origin main
           sudo cat ./index.html > /var/www/html/index.nginx-debian.html
           sudo systemctl restart nginx
