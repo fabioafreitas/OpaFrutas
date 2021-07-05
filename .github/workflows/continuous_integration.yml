@@ -17,5 +17,5 @@ jobs:
         port: 22
         script: |
           cd OpaFrutas
-          sudo cat ./index.html /var/www/html/index.nginx-debian.html
+          sudo cat ./index.html > /var/www/html/index.nginx-debian.html
           sudo systemctl restart nginx
