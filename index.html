@@ -98,16 +98,17 @@
                 <h2>Dicas</h2>
                 <p>Ao adicionar os endereços o usuário pode encontrar alguns problemas de compatibilidade na formatação de texto, alguns caracteres como hífen, CEP's, abreviações como ("Av.", "R.",) podem gerar problemas na plataforma.</p>
                 <p>Nesse caso uma notificação será gerada em formato de Pop-up identificando onde a requisição apresentou erro, uma verificação nos dois endereços apresentados deve ser realizada. Sugiro manter um banco de endereços relacionando cada supermercado com seu endereço previamente testado na plataforma para agilizar futuras operações.</p>
+                <p>Erros relacionados a sigla "R$ NaN" tem relação com o uso de valores incorretos nos parâmetro, geralmente o uso da vírgula no lugar do ponto.</p>
             </div>
-            <div class="col col-sm" >
+            <div class="col col-sm mt-3" >
                 <div class="card">
                     <h3 class="card-header bg-primary text-white">Exemplos de formatação</h3>
                     <div class="card-body">
                         <dl class="row">
                             <dt class="col-6">Preço do combustível</dt>
-                            <dd class="col-6">5,8</dd>
+                            <dd class="col-6">5.8 (Atenção ao uso do ponto)</dd>
                             <dt class="col-6">Autonomia do veículo</dt>
-                            <dd class="col-6">10</dd>
+                            <dd class="col-6">10.7 (Atenção ao uso do ponto)</dd>
                             <dt class="col-6">Peso da mercadoria</dt>
                             <dd class="col-6">7000</dd>
                             <dt class="col-6">Endereços</dt>
@@ -195,8 +196,7 @@
                     return erroLog
                 },
 
-                /* copiarResultados() {
-                    /* Get the text field 
+                 copiarResultados() {
                     var copyText = '<div><table><tr><td>'+this.tempoTotal+'</td><td>'+
                         this.distanciaTotal+'</td><td>'+
                         this.custoGasolina+'</td><td>'+
@@ -208,7 +208,7 @@
                     dummy.select();
                     document.execCommand("copy");
                     document.body.removeChild(dummy);
-                }, */
+                },
             },
             filters: {
                 real(value) {
